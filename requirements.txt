@@ -1,0 +1,12 @@
+streamlit
+openai
+python-dotenv
+boto3
+openai-agents
+asyncio
+fastapi
+uvicorn
+requests
+python-multipart
+pymongo
+astrapy
