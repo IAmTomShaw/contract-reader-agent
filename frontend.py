@@ -1,23 +1,14 @@
-from operator import index
 import streamlit as st
-
-
 import io
-
 import asyncio
 
 from src.functions import (
     upload_document,
     submit_change,
     accept_change,
+    ignore_once,
     ignore_forever
 )
-
-"""
-Streamlit Contract Reader Agent Frontend
-
-This file contains the Streamlit UI and interacts with backend functions from main.py.
-"""
 
 buf = io.BytesIO()
 
@@ -39,7 +30,9 @@ if screen == "AI Suggestions":
                 try:
                     # Save uploaded file to disk
                     file_path = f"uploaded_{upl.name}"
-                    print(file_path)
+                    with open(file_path, "wb") as f:
+                        f.write(upl.getbuffer())
+
                     agent_res = asyncio.run(upload_document(file_path))
                     print(agent_res)
                     # agent_res is a list, not a dict
@@ -97,11 +90,10 @@ if screen == "AI Suggestions":
                         st.rerun()
                 with cols[1]:
                     if st.button("🚫 Ignore this time", key=f"ignore_ai_once_{s.get('id')}"):
-                        st.session_state["ignored_ai_once"].add(s.get("id"))
+                        ignore_once(s.get("id"))
                         st.info("Suggestion ignored for this session.")
                 with cols[2]:
                     if st.button("🛑 Ignore forever", key=f"ignore_ai_forever_{s.get('id')}"):
-                        st.session_state["ignored_ai_suggestions"].add(s.get("id"))
                         ignore_forever(s.get("id"))
                         st.info("Suggestion will be ignored forever.")
     else:

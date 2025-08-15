@@ -81,15 +81,21 @@ def accept_change(index: int, modified_snippet: str):
 
     suggestion["hidden"] = True  # or whatever state change you want
 
+def ignore_once(index: int):
+    suggestion = st.session_state["suggestions"][index]
+    suggestion["hidden"] = True
+
 def ignore_forever(index: int):
 
+    suggestion = st.session_state["suggestions"][index]
+
     insert_snippet(
-        st.session_state["suggestions"][index]["original_snippet"],
+        suggestion["original_snippet"],
         None,
         True
     )
 
-    st.session_state["suggestions"][index]["hidden"] = True
+    suggestion["hidden"] = True
 
 async def upload_document(file_path: str):
 

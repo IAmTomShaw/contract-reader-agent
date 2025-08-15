@@ -1,0 +1,47 @@
+[
+    {
+        "original_snippet": "Customer retains all ownership of deliverables",
+        "modified_snippet": "The Talent retains ownership and Intellectual Property Rights in all Deliverables, with the Company granted a limited license to use such Deliverables only as described in the Service Specification.",
+        "question_from_agent": "Does the Talent want to retain ownership of all Deliverables created?"
+    },
+    {
+        "original_snippet": "The Company reserves all ownership and Intellectual Property Rights which may subsist in any Deliverables, or in connection with the provision of the Services. The Company reserves the right to take such action as may be appropriate to restrain or prevent the infringement of such Intellectual Property Rights.",
+        "modified_snippet": "The Talent retains ownership of all Intellectual Property Rights in any Deliverables created, with the Company granted a license to use such Deliverables only as described in the Service Specification.",
+        "question_from_agent": "Should the Talent's ownership rights be explicitly stated to avoid any misunderstandings?"
+    },
+    {
+        "original_snippet": "Nothing in this agreement will transfer the ownership of any Intellectual Property Rights that are owned by the Company.",
+        "modified_snippet": "Nothing in this agreement will transfer the ownership of any Intellectual Property Rights that are owned by the Talent, including but not limited to their social media channels, website, branding material and any other assets.",
+        "question_from_agent": "Is it crucial to clarify that the Talent's Intellectual Property Rights are protected?"
+    },
+    {
+        "original_snippet": "The Company retains all ownership and Intellectual Property Rights in any footage, photos, audio or any other material captured by the Talent and/or the Company.",
+        "modified_snippet": "The Talent retains ownership and Intellectual Property Rights in all footage, photos, audio, or any other material captured by the Talent, with the Company granted a limited license to use such material as specified in the Service Specification.",
+        "question_from_agent": "Should the Talent's rights to footage and other media be emphasized to ensure proper control?"
+    },
+    {
+        "original_snippet": "Customer has unlimited use of the deliverables",
+        "modified_snippet": "The Company may use the Deliverables for promotional and marketing purposes only, within the limits specified in the Service Specification.",
+        "question_from_agent": "Does the Talent wish to impose limitations on how the Customer can use Deliverables?"
+    },
+    {
+        "original_snippet": "Customer acknowledges that Talent is not to be communicated or marketed as an employee, partner or customer of Customer.",
+        "modified_snippet": "Customer acknowledges that Talent must not be presented or marketed as an employee, partner, or customer of the Customer, without prior consent from the Talent.",
+        "question_from_agent": "Would the Talent prefer stronger language to enforce this stipulation?"
+    },
+    {
+        "original_snippet": "Customer is required to make payments to the Company in line with the Payment Schedule as described below:",
+        "modified_snippet": "Customer is required to make payments directly to the Talent in accordance with the Payment Schedule outlined below, as the Talent is providing the Services.",
+        "question_from_agent": "Should payments be made directly to the Talent instead of the Company?"
+    },
+    {
+        "original_snippet": "Customer shall not, without the prior written consent of the Company, at any time from the date of this Agreement to the expiry of 12 months after the last date of supply of the Services or termination of this Agreement (whichever is the latest), solicit or entice away from the Company or employ or attempt to employ any person or company who is, or has been, engaged as an employee, consultant, sub-contractor, service provider or partner of the Company in the provision of the Services.",
+        "modified_snippet": "Customer shall not, without the prior written consent of the Talent, at any time from the date of this Agreement to the expiry of 12 months after the last date of supply of the Services or termination of this Agreement, solicit or entice away from the Talent any individual engaged in the provision of the Services.",
+        "question_from_agent": "Should the Talent's interests be emphasized in the non-solicitation clause?"
+    },
+    {
+        "original_snippet": "The Company’s maximum liability to the Customer in the event of a breach shall be limited to the total amount of the Consideration described in the Service Specification which has already been paid to the Company at the time of the breach.",
+        "modified_snippet": "The Company’s maximum liability to the Customer in the event of a breach shall be limited to the total amount of the Consideration described in the Service Specification which has already been paid to the Talent at the time of the breach.",
+        "question_from_agent": "Should the liability clause reflect payments to the Talent instead of the Company?"
+    }
+]
