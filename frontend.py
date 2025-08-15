@@ -1,6 +1,7 @@
 import streamlit as st
 import io
 import asyncio
+import os
 
 from src.functions import (
     upload_document,
@@ -28,8 +29,10 @@ if screen == "AI Suggestions":
         if st.button("Process Document", key="process_doc_btn"):
             with st.spinner("Processing document..."):
                 try:
+                    # Create temp folder if it doesn't exist
+                    os.makedirs("temp", exist_ok=True)
                     # Save uploaded file to disk
-                    file_path = f"uploaded_{upl.name}"
+                    file_path = f"temp/uploaded_{upl.name}"
                     with open(file_path, "wb") as f:
                         f.write(upl.getbuffer())
 
@@ -40,8 +43,8 @@ if screen == "AI Suggestions":
                     st.success("Document processed!")
                 except Exception as e:
                     st.error(f"Processing error: {e}")
-
-        st.subheader("AI Suggested Changes")
+        if "ai_suggestions" in st.session_state:
+            st.subheader("AI Suggested Changes")
         # State for edits and ignored suggestions for AI suggestions
         if "edited_ai_suggestions" not in st.session_state:
             st.session_state["edited_ai_suggestions"] = {}
